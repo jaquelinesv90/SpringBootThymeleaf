@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width = device-width, initial-scale = 1">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+</head>
+
+<body class="container" style="background-color:#EEEEE0;">
+	<div class="row">
+		<div class="col s12 m11">
+			<div class="card white">
+				<div class="card-content">
+					<span class="card-title"><h5>Login</h5></span>
+					<form th:action="@{/login}" method="post">
+						<div class="row">
+							<div class="input-field col s6" style="margin-left: 189px;">
+								<label for="login">Login</label> <input id="login" type="text"
+									 name=username class="validate">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="input-field col s6" style="margin-left: 189px;">
+								<label for="password">Password</label> <input name="password"
+									type="password" class="validate">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="left hide-on-med-and-down"
+									style="margin-left: 70%;">
+									<li><a class="black-text" href="/recuperarsenha"> Esqueci a senha</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul class="right hide-on-med-and-down" style="margin-right: 5%;">
+									<li><a class="black-text" href="/cadastropessoa">Cadastrar
+									</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-fiel col s6" style="margin-left: 200px;">
+								<input name="submit" type="submit" value="Logar"
+									class="btn btn-medium btn-success" />
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

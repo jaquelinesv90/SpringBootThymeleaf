@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset-utf-8">
+<title>Insert title here</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+	<div class="container">
+			<form action="salvarpessoa" method="post">
+				
+				<div th:insert="~{cabecalho :: copy}"></div>
+				
+				 <label>Email</label>
+				 	<input name="sobrenome">	
+				 <label>Valor hora/aula</label>
+				 	<input name="sobrenome">	
+				 <label>Dia limite para pagamento mensal</label>
+				 	<input name="sobrenome">		
+				 
+				  <button class="btn waves-effect waves-light" type="submit" name="Salvar">Salvar-associar
+		    		<i class="material-icons right">save</i>
+		 		 </button>
+			
+			<a href="/listapessoas" class="btn btn-medium btn-success">Lista de pessoas</a>
+			</form>
+			<table class="striped">
+				<tr th:each = "pessoa : ${pessoas}">
+					<td th:text = "${pessoa.id}"></td>
+					<td th:text = "${pessoa.nome}"></td>
+					<td th:text = "${pessoa.sobrenome}"></td>
+					<td th:text = "${pessoa.idade}"></td>
+				</tr>
+			</table>	
+		<script type="text/javascript" src="js/materialize.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+	</div>
+</body>
+</html>
